@@ -9,7 +9,7 @@ const rndPhrase = Math.floor(Math.random()*dailyVibe["phrase"].length);
 // const rndPhoto = Math.floor(Math.random()*dailyVibe["photo"].length);
 // const rndSong = Math.floor(Math.random()*dailyVibe["song"].length);
 
-const phraseEl = document.getElementById("phrase")
+// const phraseEl = document.getElementById("phrase")
 // const photoEl = document.getElementById("photo")
 // const songEl = document.getElementById("song")
 
@@ -17,6 +17,8 @@ function dailyVibeIterator (obj) {
     for (let i in obj) {
         switch(i) {
             case "phrase":
+                const phraseEl = document.getElementById("phrase")
+                phraseEl.style.display = "block";
                 let newPhrase = obj[i][rndPhrase]
                 phraseEl.innerHTML = newPhrase;
                 break;
@@ -38,7 +40,7 @@ function dailyVibeIterator (obj) {
 }
 
 
-dailyVibeIterator(dailyVibe)
+// dailyVibeIterator(dailyVibe)
 
 
 // const phraseArray = ['a', 'b', 'c']
